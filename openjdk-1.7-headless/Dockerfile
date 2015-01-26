@@ -1,8 +1,7 @@
-FROM centos:centos7
+FROM ubuntu:latest
 
-RUN yum install -y java-1.7.0-openjdk-headless && \
-    yum clean all
+RUN apt-get update && \
+    apt-get install -y openjdk-7-jre-headless
 
 ENV JAVA_HOME /usr/lib/jvm/jre
 
-CMD bash
